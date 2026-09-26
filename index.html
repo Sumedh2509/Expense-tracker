@@ -1,1 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
 
+        <!-- Header -->
+        <header>
+            <div>
+                <h1>Expense Tracker</h1>
+                <p>Manage your money, simply.</p>
+            </div>
+
+            <button class="profile-btn">RP</button>
+        </header>
+
+
+        <!-- Balance Card -->
+        <!-- <section class="balance-card">
+
+            <div>
+                <p>Total Balance</p>
+                <h2>₹24,500</h2>
+            </div>
+
+            <div class="balance-icon">
+                ₹
+            </div>
+
+        </section> -->
+
+
+        <!-- Income & Expense -->
+        <!-- <section class="summary">
+
+            <div class="summary-card income">
+                <div class="summary-icon">
+                    ↑
+                </div>
+
+                <div>
+                    <p>Income</p>
+                    <h3>₹35,000</h3>
+                </div>
+            </div> -->
+
+
+            <div class="summary-card expense">
+                <div class="summary-icon">
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+fill="currentColor" viewBox="0 0 24 24" >
+<!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+<path d="M18 5V3H6v2h4c1.86 0 3.41 1.28 3.86 3H6v2h7.86c-.45 1.72-2 3-3.86 3H7c-.42 0-.79.26-.94.65s-.04.83.28 1.1l8 7 1.32-1.5-6-5.25H10c2.97 0 5.43-2.17 5.91-5H18V8h-2.09a6 6 0 0 0-1.45-3z"></path>
+</svg>
+                </div>
+
+                <div>
+                    <p>Expenses</p>
+                    <h3>₹10,500</h3>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Main Content -->
+        <div class="main-grid">
+
+            <!-- Add Expense -->
+            <section class="card add-expense">
+
+                <h2>Add Expense</h2>
+                <p class="subtitle">Record your latest spending.</p>
+                <form>
+
+                    <label for="expense-name">Expense Name</label>
+                    <input
+                        type="text"
+                        id="expense-name"
+                        placeholder="e.g. Grocery shopping"
+                    >
+
+
+                    <label for="amount">Amount</label>
+                    <input
+                        type="number"
+                        id="amount"
+                        placeholder="₹ 0"
+                    >
+
+
+                    <label for="category">Category</label>
+
+                    <select id="category">
+                        <option>Select category</option>
+                        <option>Food</option>
+                        <option>Transport</option>
+                        <option>Shopping</option>
+                        <option>Entertainment</option>
+                        <option>Education</option>
+                        <option>Grocery</option>
+                        <option>Daily essentials</option>
+                        <option>Other</option>
+                    </select>
+
+
+                    <label for="date">Date</label>
+
+                    <input
+                        type="date"
+                        id="date"
+                    >
+
+
+                    <button type="submit" class="add-btn">
+                        + Add Expense
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- Transactions -->
+            <section class="card transactions">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Recent Transactions</h2>
+                        <p class="subtitle">Your latest expenses.</p>
+                    </div>
+
+                    <button class="view-btn">
+                        View all
+                    </button>
+                </div>
+
+
+                <div class="transaction-list">
+
+                    <!-- Transaction 1 -->
+                    <div class="transaction">
+
+                        <div class="transaction-left">
+
+                            <div class="category-icon food">
+                                🍔
+                            </div>
+
+                            <div>
+                                <h4>Lunch</h4>
+                                <p>Food • Today</p>
+                            </div>
+
+                        </div>
+
+                        <span class="amount">
+                            -₹250
+                        </span>
+
+                    </div>
+
+
+                    <!-- Transaction 2 -->
+                    <div class="transaction">
+
+                        <div class="transaction-left">
+
+                            <div class="category-icon transport">
+                                🚗
+                            </div>
+
+                            <div>
+                                <h4>Uber</h4>
+                                <p>Transport • Yesterday</p>
+                            </div>
+
+                        </div>
+
+                        <span class="amount">
+                            -₹420
+                        </span>
+
+                    </div>
+
+
+                    <!-- Transaction 3 -->
+                    <div class="transaction">
+
+                        <div class="transaction-left">
+
+                            <div class="category-icon shopping">
+                                🛍️
+                            </div>
+
+                            <div>
+                                <h4>Clothes</h4>
+                                <p>Shopping • Sep 24</p>
+                            </div>
+
+                        </div>
+
+                        <span class="amount">
+                            -₹1,200
+                        </span>
+
+                    </div>
+
+
+                    <!-- Transaction 4 -->
+                    <div class="transaction">
+
+                        <div class="transaction-left">
+
+                            <div class="category-icon education">
+                                📚
+                            </div>
+
+                            <div>
+                                <h4>Books</h4>
+                                <p>Education • Sep 22</p>
+                            </div>
+
+                        </div>
+
+                        <span class="amount">
+                            -₹650
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- Categories -->
+        <section class="card categories">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Spending Categories</h2>
+                    <p class="subtitle">
+                        Where your money is going.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="category-bars">
+
+                <div class="category">
+
+                    <div class="category-info">
+                        <span>🍔 Food</span>
+                        <strong>₹3,200</strong>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-fill food-bar"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="category">
+
+                    <div class="category-info">
+                        <span>🚗 Transport</span>
+                        <strong>₹2,100</strong>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-fill transport-bar"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="category">
+
+                    <div class="category-info">
+                        <span>🛍️ Shopping</span>
+                        <strong>₹3,500</strong>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-fill shopping-bar"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="category">
+
+                    <div class="category-info">
+                        <span>📚 Education</span>
+                        <strong>₹1,700</strong>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-fill education-bar"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            <p>© 2026 Expense Tracker • Built with HTML & CSS</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
